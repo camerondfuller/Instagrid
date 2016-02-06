@@ -32,6 +32,7 @@ header {
 .results-header {
    flex-direction: row;
    height:auto;
+   transition: all .4s ease-in-out .3s;
 
    @include tablet {
       height:105px;

@@ -134,7 +134,8 @@ header {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: auto; }
+  height: auto;
+  transition: all .4s ease-in-out .3s; }
   @media (min-width: 600px) {
     .results-header {
       height: 105px; } }
