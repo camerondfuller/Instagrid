@@ -1,0 +1,22 @@
+/*---------------------------------footer------------------------------------*/
+footer {
+   display: flex;
+   height: 10vh;
+   width: 100vw;
+   justify-content: center;
+
+   @include desktop {
+      justify-content: flex-start;
+      padding-left: 2rem;
+   };
+}
+.footer {
+   color: #c2c2c2;
+   font-size: 14px;
+}
+.footer p {
+   margin-top: 10px;
+}
+footer span {
+   text-transform: uppercase;
+}

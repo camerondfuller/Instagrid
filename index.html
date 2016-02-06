@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Instagrid</title>
+   <meta name="description" content="RED Academy webdev prof program- project 2">
+   <meta name="author" content="Cameron Fuller">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" href="css/reset.css"> -->
+   <link rel="stylesheet" href="build/style.min.css">
+   <link rel="stylesheet" href="library/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
+   <script src="library/jquery-2.2.0.min.js"></script>
+
+</head>
+<body>
+   <!-- Logo & search -->
+   <header>
+      <h1 class="hidden">Instagram hashtag search site</h1>
+      <!-- Logo -->
+      <div class="logo-container">
+         <img src="images/instagrid-logo.svg" alt="Instagrid Logo" class="logo" />
+      </div>
+
+
+
+      <!-- Searchbar -->
+      <form class="search">
+         <i class="fa fa-hashtag"></i>
+         <label class="hidden">Search for a hashtag</label>
+         <input type="text" name="hash_tag" class='search-bar' placeholder="Search for a hashtag" required pattern="[a-zA-Z0-9]+">
+         <button type="submit" class="search-button"></button>
+      </form>
+   </header>
+
+   <!-- Photos go here -->
+   <section>
+      <div>
+         <ul class="photo-grid">
+         </ul>
+      </div>
+   </section>
+
+
+   <!-- footer -->
+   <footer>
+      <div class="footer">
+         <p>
+            &copy; Copyright 2016 <span>Instagrid</span>
+         </p>
+      </div>
+   </footer>
+   <script type="text/javascript" src="build/script.js"></script>
+</body>
+</html>
