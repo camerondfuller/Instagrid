@@ -115,12 +115,12 @@ header {
       }
    };
 }
-.item-cont {
+.photo-cont {
    position: relative;
    display: flex;
    flex-direction: column;
 }
-.transparent {
+.user-info-cont {
    display: flex;
    justify-content: space-between;
    background-color: rgba(0, 0, 0, 0.6);

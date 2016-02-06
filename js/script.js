@@ -22,9 +22,9 @@ $(function() {
          console.log(instagramApiResponse);
          $.each(instagramApiResponse.data, function(index, value){
             list += '<li>';
-            list += '<div class="item-cont"><a href="'+value.link+'">';
+            list += '<div class="photo-cont"><a href="'+value.link+'">';
             list += '<img src="'+value.images.standard_resolution.url +'"></a>';
-            list += '<div class="transparent">';
+            list += '<div class="user-info-cont">';
             list += '<img src="'+value.user.profile_picture+'" class="user-pic" />';
             list += '<div class="social-info"><span class="user-name">'+value.user.username+'</span>';
             list += '<span><i class="fa fa-comments"></i>'+value.comments.count;

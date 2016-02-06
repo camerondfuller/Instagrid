@@ -228,7 +228,7 @@ header {
           -ms-flex: 0 1 25%;
               flex: 0 1 25%; } }
 
-.item-cont {
+.photo-cont {
   position: relative;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,7 +237,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.transparent {
+.user-info-cont {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
