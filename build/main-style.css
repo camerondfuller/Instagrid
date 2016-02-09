@@ -291,6 +291,30 @@ header {
 i.fa::before {
   margin: 4px; }
 
+.load-more {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.add-content {
+  padding: .5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e2231a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer; }
+  .add-content:hover {
+    background-color: #b41c15; }
+
 /*---------------------------------footer------------------------------------*/
 footer {
   display: -webkit-flex;

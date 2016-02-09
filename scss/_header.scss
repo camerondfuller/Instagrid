@@ -156,3 +156,23 @@ font-weight: bold;
 i.fa::before {
    margin:4px;
 }
+.load-more {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.add-content {
+   padding: .5rem 3rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color:#fff;
+   background-color: #e2231a;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+   border: none;
+   cursor: pointer;
+
+      &:hover {
+         background-color: #b41c15;
+      }
+}

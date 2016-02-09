@@ -33,9 +33,9 @@ $(function() {
       })
       .done(responseFunc);
       $('.photo-grid').append(list);
-   });
-   $('.load-more').append('<button class="add-content">Load More</button>');
+      $('.load-more').append('<button class="add-content">Load More</button>');
 
+   });
 
 
 //end document
