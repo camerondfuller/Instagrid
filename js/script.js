@@ -1,5 +1,6 @@
 $(function() {
    var list = '';
+   var pagination = '';
    var responseFunc = function(instagramApiResponse) {
                         $.each(instagramApiResponse.data, function(index, value){
                            list += '<li>';
@@ -13,6 +14,8 @@ $(function() {
                            list += '</div></div></div></li>';
                         });
                         $('.photo-grid').append(list);
+                        pagination = instagramApiResponse.pagination.next_url;
+                        list = '';
                      };
 
 
@@ -20,10 +23,13 @@ $(function() {
       event.preventDefault();
 
       var $hashtag = $('.search-bar').val();
+
       console.log($hashtag);
+
 
       $('header').addClass('results-header');
       $('.photo-grid').empty();
+      $('.load-more').empty();
 
       $.ajax({
          dataType:'jsonp',
@@ -35,7 +41,20 @@ $(function() {
       $('.photo-grid').append(list);
       $('.load-more').append('<button class="add-content">Load More</button>');
 
+      $('.add-content').on('click', function(event){
+         event.preventDefault();
+
+         $.ajax({
+            dataType:'jsonp',
+            method: 'GET',
+            url: pagination
+         })
+         .done(responseFunc);
+         $('photo-grid').append(list);
+
+      });
    });
+
 
 
 //end document
