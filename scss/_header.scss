@@ -125,26 +125,31 @@ header {
    position: relative;
    display: flex;
    flex-direction: column;
+
+   &:hover > .user-info-cont {
+      height:70px;
+   }
 }
 .user-info-cont {
-   display: flex;
-   justify-content: space-between;
+   overflow: hidden;
    background-color: rgba(0, 0, 0, 0.6);
    position: absolute;
    bottom: 0;
+   height: 0;
+   width:100%;
    z-index: 10;
-   width: 100%;
+   transition: height .4s linear;
 }
 .user-name {
 font-weight: bold;
 }
 .user-pic {
    border-radius: 50%;
-   max-height: 50px;
+   height: 50px;
    margin: 10px;
 }
 .social-info {
-   display: flex;
+   float: right;
    flex-direction:column;
    margin: 10px;
 }

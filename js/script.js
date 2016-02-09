@@ -11,7 +11,7 @@ $(function() {
                            list += '<div class="social-info"><span class="user-name">'+value.user.username+'</span>';
                            list += '<span><i class="fa fa-comments"></i>'+value.comments.count;
                            list += '<i class="fa fa-heart"></i>'+value.likes.count+'</span>';
-                           list += '</div></div></div></li>';
+                           list += '</div></div></li>';
                         });
                         $('.photo-grid').append(list);
                         pagination = instagramApiResponse.pagination.next_url;
@@ -51,7 +51,6 @@ $(function() {
          })
          .done(responseFunc);
          $('photo-grid').append(list);
-
       });
    });
 
