@@ -23,14 +23,14 @@ $(function() {
       event.preventDefault();
 
       var $hashtag = $('.search-bar').val();
-
       console.log($hashtag);
-
 
       $('header').addClass('results-header');
       $('.photo-grid').empty();
       $('.load-more').empty();
-
+      if($hashtag === '') {
+         $('.photo-grid').append('<li><p> Sorry, nothing to display.</p></li>');
+      } else {
       $.ajax({
          dataType:'jsonp',
          method: 'GET',
@@ -52,6 +52,7 @@ $(function() {
          .done(responseFunc);
          $('photo-grid').append(list);
       });
+   }
    });
 
 
