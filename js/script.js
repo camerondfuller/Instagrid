@@ -18,7 +18,6 @@ $(function() {
                         list = '';
                      };
 
-
    $('.search-button').on('click', function(event) {
       event.preventDefault();
 
@@ -31,31 +30,27 @@ $(function() {
       if($hashtag === '') {
          $('.photo-grid').append('<li><p> Sorry, nothing to display.</p></li>');
       } else {
-      $.ajax({
-         dataType:'jsonp',
-         method: 'GET',
-         url:
-         'https://api.instagram.com/v1/tags/'+$hashtag+'/media/recent?count=12&client_id=b8586475183a4ad89a5a0ebd4a36fbc2'
-      })
-      .done(responseFunc);
-      $('.photo-grid').append(list);
-      $('.load-more').append('<button class="add-content">Load More</button>');
-
-      $('.add-content').on('click', function(event){
-         event.preventDefault();
-
          $.ajax({
             dataType:'jsonp',
             method: 'GET',
-            url: pagination
+            url:
+            'https://api.instagram.com/v1/tags/'+$hashtag+'/media/recent?count=12&client_id=b8586475183a4ad89a5a0ebd4a36fbc2'
          })
          .done(responseFunc);
-         $('photo-grid').append(list);
-      });
-   }
+         $('.photo-grid').append(list);
+         $('.load-more').append('<button class="add-content">Load More</button>');
+
+         $('.add-content').on('click', function(event){
+            event.preventDefault();
+
+            $.ajax({
+               dataType:'jsonp',
+               method: 'GET',
+               url: pagination
+            })
+            .done(responseFunc);
+            $('photo-grid').append(list);
+         });
+      }
    });
-
-
-
-//end document
 });

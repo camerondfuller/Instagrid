@@ -126,19 +126,25 @@ header {
    display: flex;
    flex-direction: column;
 
-   &:hover > .user-info-cont {
-      height:70px;
-   }
+   @include desktop {
+      &:hover > .user-info-cont {
+         height:70px;
+      }
+   };
 }
 .user-info-cont {
    overflow: hidden;
    background-color: rgba(0, 0, 0, 0.6);
    position: absolute;
    bottom: 0;
-   height: 0;
+   height: 70px;
    width:100%;
    z-index: 10;
-   transition: height .4s linear;
+
+   @include desktop {
+      height: 0;
+      transition: height .4s linear;
+   };
 }
 .user-name {
 font-weight: bold;

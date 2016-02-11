@@ -248,18 +248,22 @@ header {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .photo-cont:hover > .user-info-cont {
-    height: 70px; }
+  @media (min-width: 1000px) {
+    .photo-cont:hover > .user-info-cont {
+      height: 70px; } }
 
 .user-info-cont {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
-  height: 0;
+  height: 70px;
   width: 100%;
-  z-index: 10;
-  transition: height .4s linear; }
+  z-index: 10; }
+  @media (min-width: 1000px) {
+    .user-info-cont {
+      height: 0;
+      transition: height .4s linear; } }
 
 .user-name {
   font-weight: bold; }
