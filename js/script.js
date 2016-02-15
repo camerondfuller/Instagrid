@@ -18,17 +18,16 @@ $(function() {
                         list = '';
                      };
 
+                     $('.search-button').on('click', function(event) {
 
-   $('.search-button').on('click', function(event) {
       event.preventDefault();
-
+      $('loader').css('display', 'block');
       var $hashtag = $('.search-bar').val();
 
       console.log($hashtag);
 
-
-      $('header').addClass('results-header');
       $('.photo-grid').empty();
+      $('header').addClass('results-header');
       $('.load-more').empty();
 
       $.ajax({
@@ -38,6 +37,8 @@ $(function() {
          'https://api.instagram.com/v1/tags/'+$hashtag+'/media/recent?count=12&client_id=b8586475183a4ad89a5a0ebd4a36fbc2'
       })
       .done(responseFunc);
+
+      $('.loader').hide();
       $('.photo-grid').append(list);
       $('.load-more').append('<button class="add-content">Load More</button>');
 
