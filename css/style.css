@@ -131,6 +131,10 @@ header {
    color: #fff;
    content: '\f002';
 }
+.loader {
+  display: none;
+  width: 50px;
+}
 .photo-grid {
    display: flex;
    flex-direction: column;
