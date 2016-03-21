@@ -22,7 +22,6 @@ $(function() {
       event.preventDefault();
 
       var $hashtag = $('.search-bar').val();
-      console.log($hashtag);
 
       $('header').addClass('results-header');
       $('.photo-grid').empty();
