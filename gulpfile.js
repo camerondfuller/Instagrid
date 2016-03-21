@@ -8,6 +8,8 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
+var babel = require('gulp-babel');
+var browserify = require('gulp-browserify');
 
 
 
@@ -49,8 +51,20 @@ gulp.task('sass-process', function(){
    .pipe(rename('style.min.css'))
    .pipe(gulp.dest('./build'));
 });
-//This task takes a SASS file, adds vender prefixes, compiles it, minifies it, and stores it in the build/css folder. --------
+//This task takes a SASS file, adds vender prefixes, compiles it, minifies it, and stores it in the build/css folder.
 
+gulp.task('compile-react', function() {
+	return gulp.src('main.jsx')
+      .pipe(plumber())
+		.pipe(babel({
+			presets: ['es2015', 'react']
+		}))
+		.pipe(browserify({
+			insertGlobals: true,
+			debug: true
+		}))
+		.pipe(gulp.dest('./'));
+});
 
 //End of Declarations --------------------------------------------------------------------------------------------------
 
